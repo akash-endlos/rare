@@ -90,7 +90,7 @@ export default function Newpage() {
         </div>
         <div className="section-two-mail open-mail-box">
           <div className="open-main-box">
-            <p>open mail ?</p>
+            <p>{t('open_mail')} ?</p>
             <button className="open-box-btn">{t('cancel')}</button>
             <button className="open-box-btn">{t('open')}</button>
           </div>
