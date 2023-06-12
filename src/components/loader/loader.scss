@@ -1,0 +1,32 @@
+@import '../../styles/mixins/global.scss';
+
+.custom-loader-design {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/main-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex-center;
+    justify-content: center;
+
+    .logo-text-alignment {
+        padding: 16px 0 0 0;
+    }
+
+    img {
+        max-width: 280px;
+    }
+
+    .logo-center-alignment,
+    .logo-text-alignment {
+        @include flex-center;
+        justify-content: center;
+
+        img {
+            @include pointer;
+        }
+    }
+}

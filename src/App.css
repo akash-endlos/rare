@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  /* overscroll-behavior-y: none;
+  user-select: none; */
+  padding: 0;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  text-rendering: optimizeLegibility; */
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
+  font-family: "Futura";
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.scroll-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  will-change: transform;
+}
+

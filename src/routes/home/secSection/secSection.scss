@@ -1,0 +1,107 @@
+@import '../../../styles/mixins/global.scss';
+
+.sec-section-relative-div {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .sec-image-header-relative {
+        position: relative;
+        z-index: 9999;
+    }
+
+    .secsection-banner-image {
+        /*background-image: url("../../../assets/images/main-banner.png");*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+    }
+
+    .dot-image-style {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-image: url("../../../assets/images/01.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .3s ease-in-out;
+        background-position: center;
+    }
+
+    .dot-image-style-one {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-image: url("../../../assets/images/02.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .3s ease-in-out;
+        background-position: center;
+        background: radial-gradient(circle, rgba(29, 43, 43, 0) 0%, #333b3b 100%), url(../../../assets/images/02.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        /*&::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+            background: rgb(29,43,43);
+            background-image: radial-gradient(circle, rgba(29,43,43,0) 0%, rgba(29,43,43,1) 100%), url("../../../assets/images/gradient.png");
+        }*/
+    }
+
+    .dot-image-style-two {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-image: url("../../../assets/images/03.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .3s ease-in-out;
+        background-position: center;
+        background: radial-gradient(circle, rgba(29, 43, 43, 0) 0%, #333b3b 60%), url(../../../assets/images/03.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .dot-image-style-two.secsection-banner-open{
+        background: radial-gradient(circle, rgba(29, 43, 43, 0) 0%, #333b3b 80%), url(../../../assets/images/03.png);
+         background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.secsection-open {
+    .sec-section-relative-div {
+        .dot-image-style-one {
+            background-image: url("../../../assets/images/02.png");
+            background-size: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .dot-image-style-two { 
+            background-image: url(../../../assets/images/03.png);
+            background-size: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.secsection-banner-three.secsection-open{
+    opacity: 1 !important;
+}

@@ -1,0 +1,323 @@
+@import '../../../styles/mixins/global.scss';
+
+.contact-section-banner {
+    background-image: url("../../../assets/images/mani-service.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    @include breakpoint("max-md") {
+        padding: 110px 0 50px;
+    }
+    @include breakpoint("max-sm") {
+        padding: 0px 0 30px;
+        height: auto;
+        margin-top:30px;
+    }
+}
+
+@include breakpoint("max-sm") {
+    #all-contact {
+        height: auto !important;
+    }
+}
+
+.main-contact-banner {
+    /*background-image: url("../../../assets/images/mani-service.png");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    width: 100%;
+    height: calc(100vh - 290px);
+
+    @include breakpoint("max-md") {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    @include breakpoint("max-sm") {
+        height: 100%;
+        overflow-y: inherit;
+    }
+
+    .service-flex {
+        display: flex;
+        gap: 120px;
+        align-items: center;
+        height: 100%;
+
+        @include breakpoint("max-xl") {
+            gap: 80px;
+        }
+
+        @include breakpoint("max-lg") {
+            gap: 50px;
+        }
+
+        @include breakpoint("max-md") {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+
+        .service-flex-items:nth-child(1) {
+            width: 600px;
+
+            @include breakpoint("max-lg") {
+                width: 400px;
+            }
+
+            @include breakpoint("max-md") {
+                width: 100%;
+            }
+        }
+
+        .service-flex-items:nth-child(2) {
+            width: calc(100% - 600px);
+
+            @include breakpoint("max-lg") {
+                width: calc(100% - 400px);
+            }
+
+            @include breakpoint("max-md") {
+                width: 100%;
+            }
+
+        }
+
+        .image-style {
+            img {
+                width: 100%;
+                height: calc(100vh - 290px);
+                object-fit: cover;
+                object-position: right;
+
+                @include breakpoint("max-md") {
+                    height: 220px;
+                }
+            }
+        }
+
+        .service-text-style-for-page {
+
+            .mobile-text {
+                font-size: 30px;
+                line-height: 40px;
+                text-transform: uppercase;
+                font-family: "Futura-medium";
+                margin: 20px 0 0;
+                font-weight: 400;
+                letter-spacing: 2px;
+                color: #fff;
+
+                @include breakpoint("max-md") {
+                    padding: 16px 40px;
+                    display: block;
+                    text-transform: uppercase;
+                    font-family: "Futura-medium";
+                    font-weight: 400;
+                    color: #fff;
+                    font-size: 18px;
+                    margin: 30px 0 0;
+                    line-height: 26px;
+                    text-align: center; 
+                }
+
+                @include breakpoint("max-sm") {
+                    padding: 0px 0px;
+                }
+            }
+
+            
+            @include breakpoint("max-md") {
+                padding: 20px 40px 60px 40px;
+
+                .mobile-email-text {
+                    text-align: center;
+                }
+            }
+
+            @include breakpoint("max-sm") {
+                padding: 20px 30px 60px 30px;
+            }
+
+            .mobile-email-text {
+                a {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #fff;
+                    font-family: "Futura-light";
+
+                    @include breakpoint("max-md") {
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+            }
+
+            .social-media {
+                @include flex-center;
+                gap: 16px;
+                padding: 10px 0 20px;
+
+                img {
+                    max-width: 18px;
+                    cursor: pointer;
+                }
+
+                @include breakpoint("max-md") {
+                    justify-content: center;
+                    padding: 10px 0 20px;
+                }
+            }
+
+            .subscribe-text {
+                padding: 10px 0 0 0;
+
+                p {
+                    font-size: 30px;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    font-family: "Futura-medium";
+                    margin: 0 0 20px 0;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    color: #fff;
+
+                    @include breakpoint("max-md") {
+                        font-size: 16px;
+                        line-height: 28px;
+                        margin: 0 0 20px 0;
+                    }
+
+                    @include breakpoint("max-sm") {
+                        font-size: 12px;
+                        line-height: 20px;
+                        text-align: center;
+                        margin: 0 0 10px 0;
+                    }
+                }
+
+                .mail-grid {
+                    display: grid;
+                    grid-template-columns: 400px 80px;
+                    gap: 20px;
+
+                    @include breakpoint("max-md") {
+                        grid-template-columns: 1fr 70px;
+                        gap: 20px;
+                    }
+
+                    @include breakpoint("max-sm") {
+                        padding: 0 0px;
+                    }
+
+                    .mail-grid-items {
+                        input {
+                            width: 100%;
+                            height: 45px;
+                            background-color: transparent;
+                            border: 1px solid #fff;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #fff;
+                            font-family: "Futura-light";
+                            border-radius: 999px;
+                            padding: 0 16px;
+
+                            @include breakpoint("max-sm") {
+                                height: 32px;
+                                padding: 0 14px;
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
+
+                            &:focus {
+                                outline: none;
+                            }
+
+                        }
+
+                        button {
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            line-height: 20px;
+                            color: #fff;
+                            font-family: "Futura-light";
+                            width: 100%;
+                            height: 45px;
+                            cursor: pointer;
+                            background-color: transparent;
+                            border: 1px solid #fff;
+                            border-radius: 9999px;
+
+                            @include breakpoint("max-sm") {
+                                height: 32px;
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
+                        }
+
+                        ::placeholder {
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #fff;
+                            font-family: "Futura-light";
+
+                            @include breakpoint("max-sm") {
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
+
+                        }
+                    }
+                }
+
+                @include breakpoint("max-md") {
+                    max-width: 320px;
+                    margin: 0 auto;
+                }
+            }
+
+            .first-text {
+                h2 {
+                    font-size: 30px;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    font-family: "Futura-medium";
+                    margin: 0 0 20px 0;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    color: #fff;
+
+                    @include breakpoint("max-md") {
+                        font-size: 18px;
+                        margin: 0 0 10px 0;
+                        line-height: 26px;
+                        text-align: center;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #fff;
+                    margin: 0 0 20px 0;
+                    font-family: "Futura-light";
+                    width: calc(100% - 20%);
+
+                    @include breakpoint("max-md") {
+                        width: 100%;
+                        font-size: 10px;
+                        line-height: 16px;
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
+    }
+}

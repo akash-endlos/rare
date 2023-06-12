@@ -1,0 +1,92 @@
+@import '../../styles/mixins/global.scss';
+
+.menu-bar-alignment {
+    position: fixed;
+    width: 100%;
+    bottom: 40px;
+    pointer-events: none;
+
+    @include breakpoint("max-md") {
+        bottom: 16px;
+    }
+
+    .mobile-view-footer-content-alignment {
+        max-width: 100%;
+        padding: 0 20px;
+
+        display: none;
+
+        @include breakpoint("max-md") {
+            display: block;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0;
+            letter-spacing: 2px;
+            @include pointer;
+            text-transform: uppercase;
+            font-family: "Futura";
+            color: var(--main-color);
+            text-align: center;
+        }
+    }
+
+    .menubar-container {
+        max-width: 100%;
+        padding: 0 80px;
+        margin: 0 auto;
+        pointer-events: none;
+
+        @include breakpoint("max-md") {
+            display: none;
+        }
+
+        .menu-bar-alignment-for-section {
+            @include flex-center;
+            justify-content: space-between;
+            pointer-events: none;
+
+            .right-side-content {
+                pointer-events: all;
+
+                p {
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-family: "Futura";
+                    color: var(--main-color);
+                }
+            }
+
+            .left-side-content {
+                @include flex-center;
+                pointer-events: all;
+
+                a,
+                span {
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin: 0;
+                    @include pointer;
+                    display: block;
+                    text-transform: uppercase;
+                    font-family: "Futura";
+                    transition: .3s ease-in-out;
+                    color: var(--main-color);
+
+                    &:hover {
+                        opacity: .5;
+                        transition: .3s ease-in-out;
+                    }
+                }
+
+                span {
+                    padding: 0 6px;
+                }
+            }
+        }
+    }
+}

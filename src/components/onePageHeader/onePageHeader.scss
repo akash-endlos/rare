@@ -1,0 +1,221 @@
+@import '../../styles/mixins/global.scss';
+
+.one-page-header-content-alignment {
+
+    @include breakpoint("max-md") {
+        &.sticky {
+            .first-section-header-alignment {
+                justify-content:start;
+
+                .logo {
+
+                    img {
+                        max-width: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    max-width: 100%;
+    margin: 0 auto;
+
+    .first-section-header-alignment {
+        @include flex-center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: none;
+        width: 100%;
+        padding: 40px 80px 0 80px;
+        justify-content: space-between;
+
+        .desktop-header-hidden {
+            display: none;
+        }
+
+        @include breakpoint("max-md") {
+            padding: 20px;
+            justify-content: center;
+
+            &.open{
+            z-index: 0;
+            }
+        }
+
+        @include breakpoint("max-sm") {
+            padding: 10px;
+        }
+
+        .logo {
+            pointer-events: all;
+
+            img {
+                transition: all 0.3s ease;
+            }
+        }
+
+        .mobile-menu {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            display: none;
+            pointer-events: all;
+
+            @include breakpoint("max-md") {
+                display: block;
+            }
+
+            img {
+                max-width: 32px;
+                cursor: pointer;
+            }
+
+            i {
+                color: var(--main-color);
+                @include pointer;
+                font-size: 26px;
+            }
+        }
+
+        .text {
+            pointer-events: all;
+
+            @include breakpoint("max-md") {
+                display: none;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 18px;
+                margin: 0;
+                @include pointer;
+                text-transform: uppercase;
+                font-family: "Futura";
+                color: var(--main-color);
+                @include flex-center;
+                transition: .3s ease-in-out;
+
+                a {
+                    &:hover {
+                        opacity: .5;
+                        transition: .3s ease-in-out;
+                    }
+                }
+
+                span {
+                    padding: 0 5px;
+                    display: block;
+                }
+            }
+        }
+
+        .logo {
+            img {
+                max-width: 160px;
+                @include pointer;
+
+                @include breakpoint("max-md") {
+                    max-width: 143px;
+                }
+            }
+        }
+    }
+}
+
+.mobile-header-design {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999999999999;
+    background-color: #6D623A;
+    width: calc(100% - 0%);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .mobile-body-content-alignment {
+        padding: 20px;
+
+        height: calc(100vh - 280px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            padding: 20px 20px 30px 20px;
+            font-family: "Futura-medium";
+            display: block;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 24px;
+            color: var(--main-color);
+        }
+    }
+
+    .text {
+
+        display: flex;
+        justify-content: center;
+
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            margin: 0;
+            @include pointer;
+            text-transform: uppercase;
+            font-family: "Futura";
+            color: #ffcfa7;
+            @include flex-center;
+            transition: .3s ease-in-out;
+
+            a {
+                &:hover {
+                    opacity: .5;
+                    transition: .3s ease-in-out;
+                }
+            }
+
+            span {
+                padding: 0 5px;
+                display: block;
+            }
+        }
+    }
+
+    .mobile-header-alignment {
+        padding: 40px 20px;
+        @include flex-center;
+        position: relative;
+        justify-content: center;
+
+        .close-button {
+            position: absolute;
+            right: 25px;
+            top: 35px;
+        }
+
+        div {
+            i {
+                color: var(--main-color);
+                font-size: 35px;
+                cursor: pointer;
+            }
+
+            img {
+                max-width: 132px;
+            }
+        }
+    }
+}
+
+.mobile-header-hidden {
+    transform: translateX(100%);
+    transition: .3s ease-in-out;
+}
+
+.mobile-header-show {
+    transform: translateX(0%);
+    transition: .3s ease-in-out;
+}

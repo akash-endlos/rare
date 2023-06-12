@@ -1,0 +1,25 @@
+.main-section {
+    overflow: hidden;
+
+    .slick-dots {
+        display: block;
+        top: 50%;
+        bottom: inherit;
+        left: 40px;
+        margin: inherit;
+        text-align: left;
+    }
+
+    .slick-dots li button:before {
+        color: #fff;
+        opacity: 1;
+    }
+
+    .slick-dots li {
+        display: block;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: var(--main-color) !important;
+    }
+}
