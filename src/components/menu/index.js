@@ -1,7 +1,9 @@
 import React from "react";
 //import { NavLink } from "react-router-dom";
 import "./menu.scss";
+import { useTranslation } from "react-i18next";
 export default function MenuBar() {
+  const { t } = useTranslation()
   const nextSection = (currentPage) => {
     let navDots = document.getElementsByClassName("nav-dot");
     navDots = Array.prototype.slice.call(navDots);
@@ -18,11 +20,11 @@ export default function MenuBar() {
         <div className="menubar-container">
           <div className="menu-bar-alignment-for-section">
             <div className="left-side-content">
-              <a href="/" onClick={() => nextSection(0)}>home</a>
+              <a href="/" onClick={() => nextSection(0)}>{t('home')}</a>
               <span>|</span>
-              <a href="/" className="wc-about-link nav-dot" data-screen="about-us">about</a>
+              <a href="/" className="wc-about-link nav-dot" data-screen="about-us">{t('about')}</a>
               <span>|</span>
-              <a href="javascript:;" className="say-helloy" onClick={() => nextSection(0)}>say helllo</a>
+              <a href="javascript:;" className="say-helloy" onClick={() => nextSection(0)}>{t('say_hello')}</a>
             </div>
             <div className="right-side-content">
               <p>2023 RARE EARTH GENOMICS ™</p>

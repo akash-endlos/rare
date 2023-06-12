@@ -6,9 +6,10 @@ import SecSection from "./secSection";
 import ContactSection from "./contactSection";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 import About from "../about";
+import { useTranslation } from "react-i18next";
 export default function Home() {
   const [openModal, setOpenModal] = useState(true);
-
+  const { t } = useTranslation()
   const settings = {
     dots: true,
     infinite: true,
@@ -41,9 +42,9 @@ export default function Home() {
 
           {openModal && (
             <div className="open-main-box">
-              <p>open mail ?</p>
-              <button>cancel</button>
-              <button>open</button>
+              <p>{t('open_mail')} ?</p>
+              <button className="open-box-btn">{t('cancel')}</button>
+              <button className="open-box-btn">{t('open')}</button>
             </div>
           )}
         </div>

@@ -17,7 +17,7 @@ import ContactSection from "../home/contactSection";
 import SmoothScroll from "../../components/smoothscroll";
 import { useTranslation } from "react-i18next";
 export default function Newpage() {
-  const {t}=useTranslation()
+  const { t } = useTranslation()
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -48,22 +48,22 @@ export default function Newpage() {
   function SampleNextArrow1(props) {
     const { className, style, onClick } = props;
     return (
-      
-        <div className="right-side-arrow-about-us" onClick={onClick}>
-          <img src={IconDesign} alt="IconDesign" />
-        </div>
-      
+
+      <div className="right-side-arrow-about-us" onClick={onClick}>
+        <img src={IconDesign} alt="IconDesign" />
+      </div>
+
     );
   }
 
   function SamplePrevArrow1(props) {
     const { className, style, onClick } = props;
     return (
-      
-        <div className="left-side-arrow-about-us" onClick={onClick}>
-          <img src={IconDesign} alt="IconDesign" />
-        </div>
-      
+
+      <div className="left-side-arrow-about-us" onClick={onClick}>
+        <img src={IconDesign} alt="IconDesign" />
+      </div>
+
     );
   }
 
@@ -81,66 +81,66 @@ export default function Newpage() {
   return (
     <div>
       <div className="fullscreen-container" id="fullscreen">
-      <div className="nav-dot-container">
-        <p className="nav-dot dot-active" id="nav-dot-1" data-screen="main-screen"><span></span></p>
-        <p className="nav-dot" id="nav-dot-2" data-screen="about-us"><span></span></p>
-        <p className="nav-dot" id="nav-dot-3" data-screen="all-services"><span></span></p>
-        <p className="nav-dot" id="nav-dot-4" data-screen="all-partners"><span></span></p>
-        <p className="nav-dot" id="nav-dot-5" data-screen="all-contact"><span></span></p>
-      </div>
+        <div className="nav-dot-container">
+          <p className="nav-dot dot-active" id="nav-dot-1" data-screen="main-screen"><span></span></p>
+          <p className="nav-dot" id="nav-dot-2" data-screen="about-us"><span></span></p>
+          <p className="nav-dot" id="nav-dot-3" data-screen="all-services"><span></span></p>
+          <p className="nav-dot" id="nav-dot-4" data-screen="all-partners"><span></span></p>
+          <p className="nav-dot" id="nav-dot-5" data-screen="all-contact"><span></span></p>
+        </div>
         <div className="section-two-mail open-mail-box">
           <div className="open-main-box">
             <p>open mail ?</p>
-            <button className="open-box-btn">cancel</button>
-            <button className="open-box-btn">open</button>
+            <button className="open-box-btn">{t('cancel')}</button>
+            <button className="open-box-btn">{t('open')}</button>
           </div>
         </div>
         <div id="all-pages">
           <section className="page" id="main-screen">
             <div className="text-container">
               <div id="home">
-              <div className="fullscreen-first" >
-                <div className="slide open-mail-box" id="fullscreen-first">
-                  <div className="open-main-box">
-                    <p>open mail ?</p>
-                    <button className="open-box-btn">cancel</button>
-                    <button className="open-box-btn">open</button>
+                <div className="fullscreen-first" >
+                  <div className="slide open-mail-box" id="fullscreen-first">
+                    <div className="open-main-box">
+                      <p>{t('open_mail')} ?</p>
+                      <button className="open-box-btn">{t('cancel')}</button>
+                      <button className="open-box-btn">{t('open')}</button>
+                    </div>
                   </div>
-                </div>
-                <div className="slide secsection-banner-logo" id="fullscreen-second">
-                  <FirstSection setOpenModal={setOpenModal} />
-                  
-                </div>
-                <div className="slide secsection-banner secsection-banner-one" id="fullscreen-second-two">
+                  <div className="slide secsection-banner-logo" id="fullscreen-second">
+                    <FirstSection setOpenModal={setOpenModal} />
+
+                  </div>
+                  <div className="slide secsection-banner secsection-banner-one" id="fullscreen-second-two">
                     <SecSection />
-                </div>
-
-                <div className="slide secsection-banner secsection-banner-two" id="fullscreen-third">
-                  <div className="sec-section-relative-div">
-                    <div className="secsection-banner-image" id="secsection-bg-two">
-                      <div className="sec-image-header-relative"></div>
-                    </div>
-                    <div className="dot-image-style-one"></div>
                   </div>
-                </div>
 
-                <div className="slide secsection-banner secsection-banner-three" id="fullscreen-fourth">
-                  <div className="sec-section-relative-div">
-                    <div className="secsection-banner-image" id="secsection-bg-fourth">
-                      <div className="sec-image-header-relative"></div>
+                  <div className="slide secsection-banner secsection-banner-two" id="fullscreen-third">
+                    <div className="sec-section-relative-div">
+                      <div className="secsection-banner-image" id="secsection-bg-two">
+                        <div className="sec-image-header-relative"></div>
+                      </div>
+                      <div className="dot-image-style-one"></div>
                     </div>
-                    <div className="dot-image-style-two" id="secsection-banner-tow"></div>
                   </div>
-                </div>
+
+                  <div className="slide secsection-banner secsection-banner-three" id="fullscreen-fourth">
+                    <div className="sec-section-relative-div">
+                      <div className="secsection-banner-image" id="secsection-bg-fourth">
+                        <div className="sec-image-header-relative"></div>
+                      </div>
+                      <div className="dot-image-style-two" id="secsection-banner-tow"></div>
+                    </div>
+                  </div>
                 </div>
                 <div
-                      className="bottom-arrow-alignment-abc" data-screen="about-us"
-                    >
-                      <img src={Icon} alt="Icon" />
-                    </div>
+                  className="bottom-arrow-alignment-abc" data-screen="about-us"
+                >
+                  <img src={Icon} alt="Icon" />
+                </div>
               </div>
             </div>
-          </section>         
+          </section>
           <section className="page" id="about-us">
             <div className="text-container">
               <About />
@@ -170,13 +170,13 @@ export default function Newpage() {
                           <div className="service-text-style-for-page">
                             <h2>{t('services')}</h2>
                             <p>
-                            {t('services_first_para')}
+                              {t('services_first_para')}
                             </p>
                             <p>
-                            {t('services_second_para')}
+                              {t('services_second_para')}
                             </p>
                             <p>
-                            {t('services_third_para')}
+                              {t('services_third_para')}
                             </p>
                           </div>
                         </div>
@@ -289,7 +289,7 @@ export default function Newpage() {
                             <h2>{t('strategic_partnershipt')}</h2>
                             <p>
                               {t('strategic_partnershipt_data')}
-                              </p>
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -339,7 +339,7 @@ export default function Newpage() {
             </div>
           </section>
         </div>
-        
+
       </div>
     </div>
   );
