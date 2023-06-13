@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb66e076.chunk.css",
+    "main.js": "/static/js/main.1bfe98bd.chunk.js",
+    "main.js.map": "/static/js/main.1bfe98bd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ae452d8c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ae452d8c.js.map",
+    "static/css/2.65f8c46c.chunk.css": "/static/css/2.65f8c46c.chunk.css",
+    "static/js/2.791c820c.chunk.js": "/static/js/2.791c820c.chunk.js",
+    "static/js/2.791c820c.chunk.js.map": "/static/js/2.791c820c.chunk.js.map",
+    "static/js/3.14796d81.chunk.js": "/static/js/3.14796d81.chunk.js",
+    "static/js/3.14796d81.chunk.js.map": "/static/js/3.14796d81.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.65f8c46c.chunk.css.map": "/static/css/2.65f8c46c.chunk.css.map",
+    "static/css/main.eb66e076.chunk.css.map": "/static/css/main.eb66e076.chunk.css.map",
+    "static/js/2.791c820c.chunk.js.LICENSE.txt": "/static/js/2.791c820c.chunk.js.LICENSE.txt",
+    "static/media/secSection.scss": "/static/media/03.1358d421.png",
+    "static/media/newpage.scss": "/static/media/main-banner.491753a3.png",
+    "static/media/a-7.3c690e60.png": "/static/media/a-7.3c690e60.png",
+    "static/media/about-image.2e6c4042.png": "/static/media/about-image.2e6c4042.png",
+    "static/media/coffe-mobile.38069c95.png": "/static/media/coffe-mobile.38069c95.png",
+    "static/media/coffe-new.627b269c.png": "/static/media/coffe-new.627b269c.png",
+    "static/media/coffe.92ccf03e.png": "/static/media/coffe.92ccf03e.png",
+    "static/media/coffe1.f91ef267.jpg": "/static/media/coffe1.f91ef267.jpg",
+    "static/media/coffe2.0e6cd0ed.jpg": "/static/media/coffe2.0e6cd0ed.jpg",
+    "static/media/logo.65165d57.png": "/static/media/logo.65165d57.png",
+    "static/media/logo.ff2d3fd2.gif": "/static/media/logo.ff2d3fd2.gif",
+    "static/media/contactSection.scss": "/static/media/mani-service.c3dbcc90.png",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
+    "static/media/teaxs.beb08d5f.png": "/static/media/teaxs.beb08d5f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ae452d8c.js",
+    "static/css/2.65f8c46c.chunk.css",
+    "static/js/2.791c820c.chunk.js",
+    "static/css/main.eb66e076.chunk.css",
+    "static/js/main.1bfe98bd.chunk.js"
+  ]
+}

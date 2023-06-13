@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MenuBar from "../../../components/menu";
 import OnePageHeader from "../../../components/onePageHeader";
 import "./contactSection.scss";
@@ -6,8 +6,39 @@ import FacebookIcon from "../../../assets/images/fb.png";
 import SecImage from "../../../assets/images/a-7.png";
 import InstaIcon from "../../../assets/images/insta.png";
 import LinkdinIcon from "../../../assets/images/linkdin.png";
+import axios from 'axios';
+
 import { useTranslation } from "react-i18next";
 export default function ContactSection() {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleEmailSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+
+      const response = await axios.post('http://localhost:5000/send-email', {
+        to: email,
+        subject: 'You Are Subscribe The Channel',
+        text: 'Thank you For Subscribe',
+      });
+
+      // console.log('Email sent successfully!', response.data);
+      setEmail('')
+      setLoading(false);
+      setError(null);
+    } catch (error) {
+      // console.error('Error sending email:', error.response.data);
+
+      setLoading(false);
+      setError('Failed to send email.');
+    }
+  };
+
+
   const { t } = useTranslation()
   return (
     <div>
@@ -42,11 +73,14 @@ export default function ContactSection() {
                     <p>{t('subscribe')}</p>
                     <div className="mail-grid">
                       <div className="mail-grid-items">
-                        <input type="text" placeholder={t('your_email')} />
+                        <input type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)} placeholder={t('your_email')} />
                       </div>
                       <div className="mail-grid-items">
-                        <button>{t('enter')}</button>
+                        <button disabled={loading} onClick={handleEmailSubmit}>{ t('enter')}</button>
                       </div>
+                      {error && <p>{error}</p>}
                     </div>
                   </div>
                 </div>
