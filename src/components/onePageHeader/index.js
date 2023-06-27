@@ -68,9 +68,10 @@ console.log(currentLanguage);
         </div>
         <div className="mobile-body-content-alignment">
           <div>
-            {/* <a href="/" onClick={() => setSidebarOpen(false)}>home</a>
-            <a href="#about-us" className="wc-about-link nav-dot" data-screen="about-us" onClick={() =>{nextSection(2), setSidebarOpen(false)} }>about</a> */}
-            {/* <a href="javascript:;" className="say-helloy" onClick={() => setSidebarOpen(false)}>say helllo</a> */}
+            <a href="/" onClick={() => setSidebarOpen(false)}>home</a>
+            <a href="/" onClick={() => setSidebarOpen(false)} className="wc-about-link nav-dot" data-screen="about-us">{t('about')}</a>
+            {/* <a href="#about-us" className="wc-about-link nav-dot" data-screen="about-us" onClick={() =>{nextSection(2), setSidebarOpen(false)} }>about</a> */}
+            <a href="javascript:;" className="say-helloy" onClick={() => setSidebarOpen(false)}>say helllo</a>
           </div>
         </div>
         <div className="mobile-body-footer-text">
