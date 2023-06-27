@@ -61,7 +61,7 @@ export default function ContactSection() {
                   </div>
                   <div className="mobile-email-text">
                     <a href="mailto:howdy@rareearth.com?subject = Feedback&body = Message">
-                      howdy@rareearth.com
+                    Howdy@rareearthgenomics.com
                     </a>
                   </div>
                   <h2 className="mobile-text">{t('connect')}</h2>

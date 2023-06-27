@@ -92,7 +92,9 @@ export default function Newpage() {
           <div className="open-main-box">
             <p>{t('open_mail')} ?</p>
             <button className="open-box-btn">{t('cancel')}</button>
+            <a href="mailto:howdy@rareearth.com?subject = Feedback&body = Message">
             <button className="open-box-btn">{t('open')}</button>
+                    </a>
           </div>
         </div>
         <div id="all-pages">
